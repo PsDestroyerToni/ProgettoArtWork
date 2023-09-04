@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scelta</title>
+    <link rel="stylesheet" href="../style/scelta.css">
+    <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $( function() {
+    $( "#finestra" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "drop",
+        duration: 1000
+      },
+      hide: {
+        effect: "drop",
+        duration: 1000
+      }
+    });
+ 
+    $( "#open" ).on( "click", function() {
+      $( "#finestra" ).dialog( "open" );
+    });
+  } );
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Scegli come vuoi visualizzare l'ordinamento delle opere</h1>
+        <div class="btn-container">
+            <a href="#" type="button" class="btn" id="open"><span>Epoca</span></a>
+            <a href="autore.html" type="button" class="btn"><span>Autore</span></a>
+        </div>
+    </div>
+    <div id="finestra" title="Prossimamente">
+        <p style="font-size: 3vh;">Questa funzione <strong></strong>non è stata ancora implementata </strong>, ma lo faremo presto!</p>
+    </div>
+    <p id="box"></p>
+
+</body>
+
+</html>

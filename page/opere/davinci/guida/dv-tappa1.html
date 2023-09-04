@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scelta</title>
+    <link rel="stylesheet" href="../../../../style/tappe/dv-tappa1.css">
+    <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+function getPics() {
+const imgs = document.querySelectorAll('.mappa img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+  img.addEventListener('click', function() {
+    fullPage.style.backgroundImage = 'url(' + img.src + ')';
+    fullPage.style.display = 'block';
+  });
+});}
+    </script>
+    <style>
+      #fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg);
+  scale: 1.9 2;}
+    </style>
+</head>
+<body onload="getPics()">
+    <div class="container">
+        <h1 class="title">Segui la mappa per arrivare all'opera</h1>
+        <div class="mappa">
+            <img src="../../../../img/mappa/sali.gif" alt=""style="width: 385px;
+            height: 30%;" class="zoom">
+            <img src="../../../../img/mappa/annunciazioneMap.gif" alt=""style="width: 385px;
+            height: 30%;" class="zoom">
+        </div>
+    <div class="btn-container">
+        <a href="../guida/annunciazione.html" type="button" class="btn" ><span>Ci sono!</span></a>
+            </div>
+        </div>
+        <div id="fullpage" onclick="this.style.display='none';"></div>
+</body>
+</html>

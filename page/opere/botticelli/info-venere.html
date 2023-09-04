@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../style/opere/palladeec.css">
+  <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $(document).on('click', '#video_el', function (e) {
+    var video = $(this).get(0);
+    if (video.paused === false) {
+        video.pause();
+    } else {
+        video.play();
+    }
+    return false;
+});
+    </script>
+</head>
+
+<body>
+  <div class="info">
+    <div class="video">
+      <video id="video_el" src="../../../video/venere.mp4" width=auto autoplay>
+      </video>
+    </div>
+    <div class="testo">
+      <p style="font-size: 3vh;margin-top: 3%;">
+        Ciao! Sono Sandro Botticelli, un pittore italiano del XV secolo. Ti racconterò della mia opera più famosa, la "Nascita di Venere". 
+        In questo dipinto, ho rappresentato la dea dell'amore e della bellezza mentre arriva sull'isola di Cipro, nata dalla spuma del mare 
+        e sospinta dai venti Zefiro e, forse, Aura. Venere è raffigurata in piedi sopra la valva di una conchiglia, pura e perfetta come una
+         perla. Una giovane donna le porge un manto cosparso di fiori, identificata talvolta con una delle Grazie oppure 
+         con l'Ora della primavera, mentre i venti le portano rose.Diversamente dalla "Primavera", che ho dipinto su tavola, 
+         la "Nascita di Venere" fu realizzata su tela, un supporto comune nel Quattrocento per le pitture decorative destinate 
+         alle residenze signorili. Per l'atteggiamento pudico di Venere che copre la nudità con i lunghi capelli biondi, ho preso 
+         ispirazione dalle statue dell'epoca classica, i cui riflessi di luce sono ottenuti tramite l'applicazione di oro. Anche la coppia dei 
+         Venti che vola abbracciata è una citazione da un'opera antica, una gemma di età ellenistica posseduta da Lorenzo il Magnifico. Spero 
+         che ti sia piaciuta la storia del mio dipinto!
+
+
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

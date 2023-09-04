@@ -1,0 +1,41 @@
+body {
+  background-image: url(../../img/opere/pallaec.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+}
+
+p {
+  padding: 1px;
+  color: whitesmoke;
+  width: 100%;
+  bottom: 0;
+
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  margin-left: 0px;
+}
+
+#video_el {
+  height: 30vh;
+  margin-top: 1rem;
+}
+
+
+.testo {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 1rem;
+}

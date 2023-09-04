@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../style/opere/sacraf.css">
+  <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $(document).on('click', '#video_el', function (e) {
+    var video = $(this).get(0);
+    if (video.paused === false) {
+        video.pause();
+    } else {
+        video.play();
+    }
+    return false;
+});
+    </script>
+</head>
+
+<body>
+  <div class="info">
+    <div class="video">
+      <video id="video_el" src="../../../video/famiglia.mp4" width=auto autoplay>
+      </video>
+    </div>
+    <div class="testo">
+      <p style="font-size: 3vh;">
+        Ciao, sono Michelangelo e ho dipinto questa Sacra Famiglia per Agnolo Doni, un mercante fiorentino. Ho studiato
+        il formato circolare, molto apprezzato nel primo Rinascimento per gli arredi devozionali domestici, e l'ho
+        applicato in questa opera, in cui la composizione piramidale del gruppo si impone su quasi tutta l'altezza e la
+        larghezza della tavola. Ho cercato di rendere la compattezza del gruppo simile alla struttura di una cupola, ma
+        animata al suo interno dalle torsioni dei corpi e dalla concatenazione dei gesti. La mia fonte di ispirazione
+        sono stati i grandi marmi del periodo ellenistico, contraddistinti da movimenti serpentinati e forte
+        espressività, che stavano emergendo dagli scavi delle ville romane. Ho incluso alcuni di questi importanti
+        ritrovamenti, come l'Apollo del Belvedere e il Laocoonte, nel dipinto fra le figure di nudi in piedi, appoggiati
+        a una balaustra. Ho incluso la presenza di Laocoonte per datare il tondo alla nascita di Maria Doni. I giovani
+        nudi sembrano rappresentare l'umanità pagana, separata dalla Sacra Famiglia da un basso muretto che rappresenta
+        il peccato originale. La cornice del tondo, su disegno di Michelangelo, è stata intagliata da Francesco del
+        Tasso e vi sono raffigurate la testa di Cristo e quelle di quattro profeti, circondate da grottesche e racemi,
+        in cui sono nascoste, in alto a sinistra, delle mezze lune, insegne araldiche della famiglia Strozzi.
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

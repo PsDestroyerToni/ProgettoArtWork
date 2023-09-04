@@ -1,0 +1,14 @@
+#settings-btn {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: #00000074;
+    border-top-left-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    mix-blend-mode: normal;
+}

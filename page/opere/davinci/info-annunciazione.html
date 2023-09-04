@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style/opere/annunciazione.css">
+    <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $(document).on('click', '#video_el', function (e) {
+    var video = $(this).get(0);
+    if (video.paused === false) {
+        video.pause();
+    } else {
+        video.play();
+    }
+    return false;
+});
+    </script>
+</head>
+
+<body>
+    <div class="info">
+        <div class="video">
+            <video id="video_el" src="../../../video/annunciazione.mp4" width=auto autoplay>
+            </video>
+        </div>
+        <div class="testo">
+            <p style="font-size: 3vh;margin-top: 1%;">
+                Ho deciso di rappresentare un tema sacro in un'ambientazione naturale, rendendo l'angelo con una
+                corporeità concreta, dalle ali ispirate a quelle di un rapace. La luce crepuscolare è straordinariamente
+                resa, plasmando le forme e facendo risaltare le sagome scure degli alberi sullo sfondo. Ho disegnato gli
+                elementi architettonici seguendo le regole della prospettiva, ma ho inserito alcune anomalie nella
+                figura della Vergine, come il braccio destro eccessivamente lungo, forse per considerare il punto di
+                vista laterale e ribassato della collocazione originale del dipinto sopra un altare laterale di una
+                chiesa.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

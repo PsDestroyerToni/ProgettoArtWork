@@ -1,0 +1,38 @@
+body{
+    background-image: url(../img/bg-autore.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+} 
+.title {
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    padding: 5%;
+    font-size: 32px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+.btn {
+    padding: 4% 15%;
+    margin: 15px;
+    background: rgba(255, 224, 0, 0.7);
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none; 
+    font-family: 'Meera Inimai';
+font-style: normal;
+font-weight: 400;
+font-size: 30px;
+mix-blend-mode: normal;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

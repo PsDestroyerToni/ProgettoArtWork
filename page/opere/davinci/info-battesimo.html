@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../style/opere/annunciazione.css">
+    <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script>
+         $(document).on('click', '#video_el', function (e) {
+      var video = $(this).get(0);
+      if (video.paused === false) {
+          video.pause();
+      } else {
+          video.play();
+      }
+      return false;
+  });
+      </script>
+</head>
+
+<body>
+    <div class="info">
+        <div class="video">
+            <video id="video_el" src="../../../video/battesimo.mp4" width=auto autoplay>
+            </video>
+        </div>
+        <div class="testo">
+            <p style="font-size: 3vh; margin-top: 1%;">
+                Sulle rive del fiume Giordano, in Palestina, ho dipinto il Battesimo di Cristo,
+                 dove Gesù riceve il sacramento dal Battista. L'opera raffigura anche due angeli 
+                 inginocchiati e un cartiglio con l'annuncio dell'avvento del Salvatore. 
+                 Secondo la testimonianza di Giorgio Vasari, il mio maestro Andrea del Verrocchio 
+                 mi avrebbe coinvolto nella realizzazione dell'angelo di sinistra, che avrei dipinto
+                con straordinaria maestria, ma gli studi recenti suggeriscono che il mio intervento sia stato più ampio,
+                includendo il paesaggio fluviale e la figura di Cristo.
+
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

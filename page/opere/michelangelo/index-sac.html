@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://webar-sdk.blippar.com/releases/1.4.7/webar-sdk-v1.4.7.min.js" webar-mode="marker-tracking"
+    auto-init="true" auto-start="true"></script>
+</head>
+
+<body>
+
+  <a-scene webar-scene="key: a8a584ca-6fb9-4f2b-b105-75f67273293c" vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false" loading-screen="enabled: false">
+    <a-camera webar-camera></a-camera>
+    <a-assets>
+      <img id="Cornice" src="/img/opere/famiglia/corniceRiempita1.png">
+      <img id="Sfondo" src="/img/opere/famiglia/midRiempito.png">
+      <img id="Persone" src="/img/opere/famiglia/Persone.png">
+    </a-assets>
+    <a-entity webar-marker="id: 5a4a32ea-8766-47cb-a615-7730047f26cf">
+      <a-image src="#Cornice" position="0 0 0" scale="1 1 1" id="myCornice">
+      </a-image>
+      <a-image src="#Sfondo" position="0 0 0" scale="1 1 1" id="mySfondo"></a-image>
+      <a-image src="#Persone" position="0 0 0" scale="1 1 1" id="myPersone"></a-image>
+    </a-entity>
+    <button onclick="startAnimation()" id="myButton">ANIMA IL QUADRO</button>
+  </a-scene>
+
+
+  <style>
+    #myButton {
+      border-radius: 25px 25px;
+      z-index: 3;
+      position: fixed;
+      bottom: 55px;
+      left: 67%;
+      background-color: rgba(37, 196, 37, 0.897);
+      color: rgb(0, 0, 0);
+      border: 2px solid #000000;
+      width: 110px;
+      height: 40px;
+      font-size: 14px
+    }
+
+    #myButton:hover {
+      background-color: #413f3f;
+      color: white;
+    }
+  </style>
+
+  <script>
+    var isOut = true;
+    function startAnimation() {
+      var _myButton = document.getElementById("myButton");
+      var _Cornice = document.getElementById("myCornice");
+      var _Sfondo = document.getElementById("mySfondo");
+      var _Persone = document.getElementById("myPersone");
+
+      if (isOut == true) {
+        _Cornice.setAttribute("position", "0 0 0");
+        _Sfondo.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0.1; dur: 2000; easing: linear; loop: false");
+        _Persone.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0.2; dur: 2000; easing: linear; loop: false");
+        _myButton.innerHTML = ("TOGLI ANIMAZIONE");
+        isOut = false;
+
+      }
+      else {
+        _Cornice.setAttribute("position", "0 0 0");
+        _Sfondo.setAttribute("animation", "property: position; from: 0 0 0.1; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+        _Persone.setAttribute("animation", "property: position; from: 0 0 0.2; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+        _myButton.innerHTML = ("ANIMA IL QUADRO");
+        isOut = true;
+
+      }
+
+    }
+
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

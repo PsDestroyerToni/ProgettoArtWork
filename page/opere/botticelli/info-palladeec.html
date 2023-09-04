@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../style/opere/palladeec.css">
+  <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $(document).on('click', '#video_el', function (e) {
+    var video = $(this).get(0);
+    if (video.paused === false) {
+        video.pause();
+    } else {
+        video.play();
+    }
+    return false;
+});
+    </script>
+</head>
+
+<body>
+  <div class="info">
+    <div class="video">
+      <video id="video_el" src="../../../video/pallade.mp4" width=auto autoplay>
+      </video>
+    </div>
+    <div class="testo">
+      <p style="font-size: 3vh;margin-top: 3%;">
+        Ciao, sono Botticelli, in questa opera ho dipinto una giovane donna che tiene per i capelli un centauro armato
+        di un'ascia da battaglia. Ci sono molte interpretazioni su chi sia questa donna, ma si ritiene che sia Minerva o
+        Camilla. Il centauro rappresenta gli istinti ferini dell'uomo e l'opera è un'interpretazione allegorica della
+        virtù che controlla le passioni. La mia intenzione era quella di creare un'opera di grande bellezza, ma anche di
+        profonda riflessione sul contrasto tra virtù e passione, tra razionalità e istinti primordiali.
+
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../style/opere/primavera.css">
+  <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+       $(document).on('click', '#video_el', function (e) {
+    var video = $(this).get(0);
+    if (video.paused === false) {
+        video.pause();
+    } else {
+        video.play();
+    }
+    return false;
+});
+    </script>
+</head>
+
+<body>
+  <div class="info">
+    <div class="video">
+      <video id="video_el" src="../../../video/primavera.mp4" width=auto autoplay>
+      </video>
+    </div>
+    <div class="testo">
+      <p style="font-size: 3vh;margin-top: 3%;">
+        Ciao, sono Sandro Botticelli e ti racconto della mia opera "La Primavera". In questa rappresentazione
+        mitologica, ho dipinto nove figure in un prato fiorito con un bosco di aranci e alloro sullo sfondo. Nella
+        composizione ci sono Zefiro che feconda la ninfa Clori, Venere e Cupido, le tre Grazie e Mercurio. Anche se il
+        significato della mia opera è complesso e rimane un po' misterioso, volevo celebrare l'amore, la pace e la
+        prosperità. Per questo ho prestato molta attenzione ai dettagli, raffigurando con cura 138 specie di piante
+        diverse. "La Primavera" è stata commissionata dalla famiglia di Lorenzo di Pierfrancesco de 'Medici alla fine
+        del XV secolo e successivamente è stata esposta nella villa di Castello.
+
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

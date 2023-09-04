@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">    
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://webar-sdk.blippar.com/releases/1.4.7/webar-sdk-v1.4.7.min.js"
+    webar-mode="marker-tracking"
+    auto-init="true"
+    auto-start="true"
+    ></script>
+  </head>
+  <body>
+    
+    <a-scene
+    webar-scene="key: a8a584ca-6fb9-4f2b-b105-75f67273293c"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false"
+    loading-screen="enabled: false">
+    <a-camera webar-camera></a-camera>
+        <a-assets>
+            <img id="Sfondo" src="../../../img/opere/benedizione/sfondo.png">
+            <img id="Persone" src="../../../img/opere/benedizione/2.png">
+            <img id="Left" src="../../../img/opere/benedizione/3.png">
+            <img id="Top" src="../../../img/opere/benedizione/1.png">
+        </a-assets>
+        <a-entity webar-marker="id: 853faf4a-f970-4d37-8e0b-944630a2ce58">
+          <a-image src="#Sfondo" 
+          position="0 0 0"
+          scale="1.05 1.3 1"
+          id="mySfondo"
+           ></a-image>
+           <a-image src="#Top" 
+           position="0 0 0"
+           scale="1.05 1.3 1"
+           id="myTop">
+           </a-image>
+          <a-image src="#Left" 
+          position="0 0 0"
+          scale="1.05 1.3 1"
+          id="myLeft"
+          ></a-image>
+          <a-image src="#Persone" 
+          position="0 0 0"
+          scale="1.05 1.3 1"
+          id="myPersone">
+          </a-image>
+        </a-entity>
+    <button onclick="startAnimation()" id="myButton">ANIMA IL QUADRO</button>
+    </a-scene>
+
+
+    <style>
+        #myButton
+        {
+          border-radius: 25px 25px;
+          z-index: 3;
+          position: fixed;
+          bottom: 55px;
+          left: 67%;
+          background-color: rgba(37, 196, 37, 0.897);
+          color: rgb(0, 0, 0);
+          border: 2px solid #000000;
+          width: 110px;
+          height: 40px;
+          font-size:14px
+          
+        }
+      </style>
+    
+    <script>
+      var isOut = true;
+        function startAnimation()
+        {
+        var _myButton = document.getElementById("myButton");
+        var _Sfondo = document.getElementById("mySfondo");
+        var _Persone = document.getElementById("myPersone");
+        var _Top = document.getElementById("myTop");
+        var _Left = document.getElementById("myLeft");
+        
+        if(isOut == true)
+          {
+          _Sfondo.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+          _Top.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0.07; dur: 2000; easing: linear; loop: false");
+          _Left.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0.08; dur: 2000; easing: linear; loop: false");
+          _Persone.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0.12; dur: 2000; easing: linear; loop: false");
+          _myButton.innerHTML = ("TOGLI ANIMAZIONE");
+          isOut = false;
+
+          }
+          else
+          {
+          _Sfondo.setAttribute("animation", "property: position; from: 0 0 0; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+          _Top.setAttribute("animation", "property: position; from: 0 0 0.07; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+          _Left.setAttribute("animation", "property: position; from: 0 0 0.08; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+          _Persone.setAttribute("animation", "property: position; from: 0 0 0.12; to: 0 0 0; dur: 2000; easing: linear; loop: false");
+          _myButton.innerHTML = ("ANIMA IL QUADRO");
+          isOut = true;
+
+          }
+        }
+
+
+    </script>
+
+
+
+  </body>
+</html>
